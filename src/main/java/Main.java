@@ -2,6 +2,14 @@ import algorithm.Algorithm;
 import algorithm.AlgorithmFactory;
 
 public class Main {
+
+    /**
+     * Main method of the program. The passed are processed and the algorithm is executed accordingly.
+     * The result of either the encoding or the decoding is printed to the console or if the user passed the
+     * corresponding flag the result is written to the specified file.
+     *
+     * @param args The arguments passed to the program by the user.
+     */
     public static void main(String[] args) {
         // Default values for the arguments
         String mode = "enc";

@@ -1,11 +1,18 @@
 package algorithm;
 
 public class ShiftAlgorithm extends Algorithm {
+
+    /**
+     * Encode the current char by shifting each letter by the specified number
+     * according to its order in the alphabet in circle
+     *
+     * @param message The original message to be encoded.
+     * @param key     The key to encode the message.
+     * @return The encoded message as a String.
+     */
     @Override
     @SuppressWarnings("StringConcatenationInLoop")
     public String encode(String message, int key) {
-        // Encode the current char by shifting each letter
-        // by the specified number according to its order in the alphabet in circle
         String encodedMessage = "";
         for (int i = 0; i < message.length(); i++) {
             char currentChar = message.charAt(i);
@@ -24,11 +31,17 @@ public class ShiftAlgorithm extends Algorithm {
         return encodedMessage;
     }
 
+    /**
+     * Decode the current char by shifting each letter by the specified number
+     * according to its order in the alphabet in circle
+     *
+     * @param message The original message to be decoded.
+     * @param key     The key to decode the message.
+     * @return The decoded message as a String.
+     */
     @Override
     @SuppressWarnings("StringConcatenationInLoop")
     public String decode(String message, int key) {
-        // Decode the current char by shifting each letter
-        // by the specified number according to its order in the alphabet in circle
         String decodedMessage = "";
         for (int i = 0; i < message.length(); i++) {
             char currentChar = message.charAt(i);
