@@ -11,10 +11,8 @@ from source, you need a JDK (Version 11 or higher) installed on your system.
 ## Get started
 
 Download the JAR file or clone this repository, run `gradle build` and then run the program from the command line.
-You can pass several arguments to the program to change the encryption and decryption algorithms. By default, the
-program uses a shifting algorithm and a unicode algorithm.
-
-See the following table for the available arguments:
+You can pass several arguments to the program to change the behavior. See the following table for the available
+arguments:
 
 | Argument | Description                               | Options                    |
 |----------|-------------------------------------------|----------------------------|
@@ -33,6 +31,7 @@ See the following table for the available arguments:
 ## Examples
 
 Input:
+
 ```sh
 java -jar jEncrypt.jar -mode enc -in my_secret_text.txt -out protected.txt -key 5 -alg unicode
 ```
@@ -42,21 +41,25 @@ This command gets data from the file my_secret_text.txt, encrypt the data with t
 protected.txt and write ciphertext to it.
 
 Input:
+
 ```sh
 java -jar jEncrypt.jar -mode enc -key 5 -data "Welcome to GitHub!" -alg unicode
 ```
 
-Output:  
+Output:
+
 ```sh
 \jqhtrj%yt%LnyMzg&
 ```
 
 Input:
+
 ```sh
 java -jar jEncrypt.jar -key 5 -alg unicode -data "\jqhtrj%yt%LnyMzg&" -mode dec
 ```
 
 Output:
+
 ```sh
 Welcome to GitHub!
 ```
